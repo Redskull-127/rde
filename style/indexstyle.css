@@ -1,3 +1,63 @@
+*{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
 body{
     font-family: 'Ubuntu', sans-serif;
+}
+.header{
+    height: var(--headh, 330px);
+    top:0;
+    background: linear-gradient(rgb(44, 250, 3),rgb(0, 183, 255));
+    border-radius: 0px 0px 30px 30px;
+    transition: 0.8s;
+}
+.header:hover{
+    --headh: 340px;
+    box-shadow: 0px 0px 15px 0px grey;
+}
+.navb{
+    overflow-y: hidden;
+    background-color: rgb(148, 148, 190);
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+ul{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+
+.element{
+    overflow-x: scroll;
+    background-color: antiquewhite;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 30px;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.element:hover{
+    color: white;
+    background-color: black;
+    font-size: 1.4em;
+    box-shadow: 0px 0px 5px 0px rgb(223, 5, 5);
+    letter-spacing: 0.15em;
+}
+.card{
+    display: inline-block;
+    padding: 8px;
 }
