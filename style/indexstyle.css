@@ -19,7 +19,7 @@ body{
 }
 .navb{
     overflow-y: hidden;
-    background-color: rgb(148, 148, 190);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     height: 70px;
@@ -27,8 +27,12 @@ body{
     margin-top: 30px;
     margin-bottom: 70px;
     border-radius: 10px;
+    transition: 1s;
 }
-
+.navb:hover{
+    background-color: black;
+    box-shadow: 7px 7px 7px 7px grey;
+}
 ul{
     display: flex;
     align-items:center;
