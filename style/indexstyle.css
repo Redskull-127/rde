@@ -6,6 +6,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 .header{
+    text-align: center;
     height: var(--headh, 330px);
     top:0;
     background: linear-gradient(rgb(44, 250, 3),rgb(0, 183, 255));
@@ -14,7 +15,7 @@ body{
 }
 .header:hover{
     --headh: 340px;
-    box-shadow: 0px 0px 15px 0px grey;
+    box-shadow: 0px 0px 20px 0px rgb(73, 73, 73);
 }
 .navb{
     overflow-y: hidden;
@@ -23,8 +24,8 @@ body{
     justify-content: center;
     height: 70px;
     width: 70%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 70px;
     border-radius: 10px;
 }
 
@@ -37,7 +38,7 @@ ul{
 
 
 .element{
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     background-color: antiquewhite;
     padding: 15px;
     font-weight: 700;
@@ -58,6 +59,16 @@ ul{
     letter-spacing: 0.15em;
 }
 .card{
-    display: inline-block;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    display: grid;
     padding: 8px;
+}
+#btop{
+    position: fixed;
+    left: 3%;
+    top: 80%;
+    height: 50px;
+    font-size: 30px;
 }
