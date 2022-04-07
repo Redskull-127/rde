@@ -12,7 +12,7 @@ body{
     height: var(--headh, 330px);
     top:0;
     width: 100%;
-    background: linear-gradient(rgb(44, 250, 3),rgb(0, 183, 255));
+    background-color: grey;
     border-radius: 0px 0px 30px 30px;
     transition: 0.8s;
 }
@@ -40,7 +40,6 @@ ul{
     display: flex;
     align-items:center;
     justify-content: center;
-    
 }
 
 
@@ -74,15 +73,15 @@ ul{
 }
 #btop{
     position: fixed;
-    left: 3%;
-    top: 80%;
+    left: 1.5%;
+    top: 84%;
     height: 50px;
     font-size: 30px;
 }
 #bbot{
     position: fixed;
-    left: 3%;
-    top: 85%;
+    left: 1.5%;
+    top: 89%;
     height: 50px;
     font-size: 30px;
 }
