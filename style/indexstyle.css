@@ -1,8 +1,10 @@
 *{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    
 }
 body{
+    animation: normal 1s;
     font-family: 'Ubuntu', sans-serif;
 }
 .header{
@@ -77,6 +79,13 @@ ul{
     height: 50px;
     font-size: 30px;
 }
+#bbot{
+    position: fixed;
+    left: 3%;
+    top: 85%;
+    height: 50px;
+    font-size: 30px;
+}
 .bodys{
     margin-top: var(--mbn, 60px);
     /* top: 0; */
@@ -85,6 +94,6 @@ ul{
     transition: 0.8s;
 }
 .bodys:hover{
-    box-shadow: 30px 30px 30px 30px rgb(46, 45, 45);
+    box-shadow: 0px 0px 30px 0px rgb(46, 45, 45);
     --mbn: 40px;
 }

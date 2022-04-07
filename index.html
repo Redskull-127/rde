@@ -81,26 +81,32 @@
   </center>
   <!-- Script For Scroll-View -->
   <i class="fa-solid fa-angle-up" id="btop"></i>
+  <i class="fa-solid fa-angle-down" id="bbot"></i>
   <script>
     $("#eventb").click(function () {
       $('html, body').animate({
         scrollTop: $("#event").offset().top
-      }, 2000);
+      }, 1200);
     });
     $("#aboutb").click(function () {
       $('html, body').animate({
         scrollTop: $("#about").offset().top
-      }, 2000);
+      }, 1200);
     });
     $("#contactb").click(function () {
       $('html, body').animate({
         scrollTop: $("#contact").offset().top
-      }, 2000);
+      }, 1200);
     });
     $("#btop").click(function () {
       $('html, body').animate({
         scrollTop: $("#header").offset().top
-      }, 2000);
+      }, 1200);
+    });
+    $("#bbot").click(function () {
+      $('html, body').animate({
+        scrollTop: $("#about").offset().top
+      }, 1200);
     });
   </script>
   <!-- End - Script For Scroll-View-->
