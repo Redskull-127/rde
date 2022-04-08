@@ -1,49 +1,153 @@
-*{
+* {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    
 }
-body{
+
+body {
     animation: normal 1s;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
-.header{
+
+.header {
+    display: flex;
     text-align: center;
     height: var(--headh, 330px);
-    top:0;
+    top: 0;
     width: 100%;
+    background: center center url("../assets/images/header.png");
     background-color: grey;
     border-radius: 0px 0px 30px 30px;
     transition: 0.8s;
 }
-.header:hover{
+
+.header:hover {
     --headh: 340px;
     box-shadow: 0px 0px 20px 0px rgb(73, 73, 73);
 }
-.navb{
+
+.headimg {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.headimg img {
+    -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
+    height: 100px;
+    animation: image-slide 3s cubic-bezier(0.5, 0.5, 0, 1);
+    animation-fill-mode: forwards;
+}
+
+.headtext {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Places this below the image container */
+    margin-left: -100px;
+    /* animation: text-slide 4s cubic-bezier(0.5, 0.5, 0, 1); */
+    /* animation-fill-mode: backwards; */
+}
+
+.fading-effect {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: transparent;
+}
+
+@keyframes image-slide {
+    0% {
+        transform: translateX(-0px) scale(0);
+    }
+
+    60% {
+        transform: translateX(-0px) scale(1);
+    }
+
+    90% {
+        transform: translateX(85px) scale(1);
+    }
+
+    100% {
+        transform: translateX(86px) scale(1);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    @keyframes image-slide {
+        0% {
+            transform: translatex(-150px) scale(0);
+        }
+
+        60% {
+            transform: translatex(-150px) scale(1);
+        }
+
+        90% {
+            transform: translatex(120px) scale(1);
+        }
+
+        100% {
+            transform: translatex(120px) scale(1);
+        }
+    }
+}
+
+/* Slides the text by shrinking the width of the object from full (100%) to nada (0%) */
+@keyframes text-slide {
+    0% {
+        width: 100%;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    75% {
+        width: 0;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.navb {
     overflow-y: hidden;
     background-color: transparent;
     display: flex;
     justify-content: center;
-    height: 70px;
+    height: 80px;
     width: 70%;
-    margin-top: 50px;
+    margin-top: 40px;
     /* margin-bottom: var(--mbn, 60px); */
     border-radius: 10px;
     transition: 1s;
 }
-.navb:hover{
+
+.navb:hover {
     background-color: black;
     box-shadow: 7px 7px 7px 7px grey;
 }
-ul{
+
+ul {
+    margin-top: 20px;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
 
-
-.element{
+.element {
     /* overflow-x: scroll; */
     background-color: antiquewhite;
     padding: 15px;
@@ -57,42 +161,85 @@ ul{
     transition: 0.4s;
 }
 
-.element:hover{
+.element:hover {
     color: white;
     background-color: black;
     font-size: 1.4em;
     box-shadow: 0px 0px 5px 0px rgb(223, 5, 5);
     letter-spacing: 0.15em;
 }
-.card{
+
+.card {
     justify-content: center;
     display: flex;
     width: 100%;
     display: grid;
     padding: 8px;
 }
-#btop{
+
+#btop {
     position: fixed;
     left: 1.5%;
     top: 84%;
     height: 50px;
     font-size: 30px;
 }
-#bbot{
+
+#bbot {
     position: fixed;
     left: 1.5%;
     top: 89%;
     height: 50px;
     font-size: 30px;
 }
-.bodys{
+
+.bodys {
+    display: grid;
+    justify-content: center;
+    padding: 10px 10px 0px 0px;
     margin-top: var(--mbn, 60px);
     /* top: 0; */
     border-radius: 30px 30px 0px 0px;
     background-color: grey;
     transition: 0.8s;
 }
-.bodys:hover{
+
+.bodys:hover {
     box-shadow: 0px 0px 30px 0px rgb(46, 45, 45);
     --mbn: 40px;
+}
+
+#loader {
+    display: flex;
+    top: 40%;
+    left: 45%;
+    justify-self: center;
+    background: black black center center;
+    background-color: transparent;
+    fill: transparent;
+    z-index: 100;
+    position: fixed;
+    border: 16px solid #0c0c0c;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.carousel{
+    top: 3%;
+    left: 70%;
+    height: 300px;
+    width: 300px;
+    background-color: #0c0c0c;
 }
