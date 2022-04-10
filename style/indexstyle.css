@@ -3,14 +3,12 @@
     padding: 0 0 0 0;
 }
 
-body {
-    animation: normal 1s;
-    font-family: "Ubuntu", sans-serif;
-    background-color: #0c0c0c;
-}
 
 .body1 {
-    background-color: rgb(197, 192, 192);
+    animation: normal 1s;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 800;
+    background-color: #e4c292;
 }
 
 .header {
@@ -19,14 +17,14 @@ body {
     height: var(--headh, 330px);
     top: 0;
     width: 100%;
-    background: var(--headbg, url("../assets/images/body.png"));
+    background: var(--headbg, center center url("../assets/images/body.png"));
     background-color: grey;
     border-radius: 0px 0px 30px 30px;
     transition: 0.8s;
 }
 
 .header:hover {
-    --headbg: center center url("../assets/images/body.png");
+    --headbg: url("../assets/images/body.png");
     --headh: 340px;
     box-shadow: 0px 0px 20px 0px rgb(73, 73, 73);
 }
@@ -49,17 +47,14 @@ body {
 
 .headtext {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 50px;
     color: black;
     position: absolute;
-    top: 35%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    top: 30%;
+    left: 3%;
     z-index: 1;
-    /* Places this below the image container */
-    margin-left: -100px;
-    /* animation: text-slide 4s cubic-bezier(0.5, 0.5, 0, 1); */
-    /* animation-fill-mode: backwards; */
 }
 
 .fading-effect {
@@ -89,25 +84,6 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
-    @keyframes image-slide {
-        0% {
-            transform: translatex(-150px) scale(0);
-        }
-
-        60% {
-            transform: translatex(-150px) scale(1);
-        }
-
-        90% {
-            transform: translatex(155px) scale(1);
-        }
-
-        100% {
-            transform: translatex(155px) scale(1);
-        }
-    }
-}
 
 /* Slides the text by shrinking the width of the object from full (100%) to nada (0%) */
 @keyframes text-slide {
@@ -136,7 +112,6 @@ body {
     height: 80px;
     width: 70%;
     margin-top: 40px;
-    /* margin-bottom: var(--mbn, 60px); */
     border-radius: 10px;
     transition: 1s;
 }
@@ -172,7 +147,7 @@ ul {
 }
 
 .element:hover {
-    color: rgb(10, 52, 118);
+    color: rgb(14, 88, 206);
     background: rgb(238, 174, 202);
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     font-size: 1.4em;
@@ -260,16 +235,44 @@ ul {
     opacity: 80%;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    @keyframes image-slide {
+        0% {
+            transform: translatex(-150px) scale(0);
+        }
+
+        60% {
+            transform: translatex(-150px) scale(1);
+        }
+
+        90% {
+            transform: translatex(155px) scale(1);
+        }
+
+        100% {
+            transform: translatex(155px) scale(1);
+        }
+    }
+    .body1{
+        display: flex;
+    }
+    .header{
+        height: 250px;
+    }
     .carousel {
         display: none;
     }
 
     .headtext {
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
         position: absolute;
-        top: 30%;
-        left: 75%;
-        width: fit-content;
+        display: flex;
+        justify-content: center;
+        top: 26%;
+        left: 11%;
+        z-index: 1;
     }
 
     .navb {
