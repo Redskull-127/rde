@@ -142,7 +142,8 @@ body {
 }
 
 .navb:hover {
-    background-color: rgb(227, 236, 210);
+    background: rgb(5, 0, 97);
+    background: linear-gradient(90deg, rgba(5, 0, 97, 1) 0%, rgba(11, 11, 144, 0.9920343137254902) 35%, rgba(8, 37, 140, 1) 65%, rgba(36, 116, 241, 0.8799894957983193) 100%);
     box-shadow: 7px 7px 7px 7px grey;
 }
 
@@ -156,22 +157,24 @@ ul {
 
 .element {
     /* overflow-x: scroll; */
-    background-color: rgb(243, 204, 160);
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 178, 252, 1) 100%);
     padding: 15px;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 30px;
     cursor: pointer;
     list-style: none;
     text-decoration: none;
     border-radius: 8px;
     transition: 0.4s;
-    color: #d60e0e;
+    color: #0b0434;
 }
 
 .element:hover {
-    color: rgb(239, 45, 45);
-    background-color: rgb(235, 239, 110);
+    color: rgb(10, 52, 118);
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     font-size: 1.4em;
     border-radius: 50%;
     box-shadow: 0px 0px 5px 0px rgb(181, 10, 10);
