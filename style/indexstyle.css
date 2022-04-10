@@ -18,6 +18,7 @@
     top: 0;
     width: 100%;
     background: var(--headbg, center center url("../assets/images/body.png"));
+    background-size: cover;
     background-color: grey;
     border-radius: 0px 0px 30px 30px;
     transition: 0.8s;
