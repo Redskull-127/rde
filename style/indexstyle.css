@@ -89,7 +89,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     @keyframes image-slide {
         0% {
             transform: translatex(-150px) scale(0);
@@ -100,11 +100,11 @@ body {
         }
 
         90% {
-            transform: translatex(120px) scale(1);
+            transform: translatex(155px) scale(1);
         }
 
         100% {
-            transform: translatex(120px) scale(1);
+            transform: translatex(155px) scale(1);
         }
     }
 }
@@ -255,4 +255,21 @@ ul {
     width: 400px;
     background-color: #0c0c0c;
     opacity: 80%;
+}
+
+@media (max-width: 600px) {
+    .carousel{
+        display: none;
+    }
+    .headtext{
+        position: absolute;
+        top: 30%;
+        left: 75%;
+        width: fit-content;
+    }
+    .navb{
+        width: 375px;
+        overflow: scroll;
+        left: 0;
+    }
 }
