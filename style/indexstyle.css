@@ -261,16 +261,18 @@ ul {
 }
 
 @media (max-width: 600px) {
-    .carousel{
+    .carousel {
         display: none;
     }
-    .headtext{
+
+    .headtext {
         position: absolute;
         top: 30%;
         left: 75%;
         width: fit-content;
     }
-    .navb{
+
+    .navb {
         width: 375px;
         overflow: scroll;
         left: 0;
