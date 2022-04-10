@@ -161,8 +161,15 @@ ul {
     justify-content: center;
     display: flex;
     width: 100%;
-    display: grid;
+    background: transparent;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding: 8px;
+}
+.card .card {
+    background: transparent;
+    padding: 15px;
 }
 
 #btop {
@@ -194,9 +201,11 @@ ul {
 
 .bodys:hover {
     --bodysbg: center url(../assets/images/header.png);
+    background-size: cover;
     box-shadow: 0px 0px 30px 0px rgb(46, 45, 45);
     --mbn: 40px;
 }
+
 
 #loader {
     display: flex;
