@@ -14,10 +14,10 @@
 .header {
     display: flex;
     text-align: center;
-    height: var(--headh, 350px);
+    height: var(--headh, 620px);
     top: 0;
     width: 100%;
-    background: var(--headbg, center center url("../assets/images/body.png"));
+    background: var(--headbg, center center url("../assets/images/Slide\ 16_9\ -\ 2.png"));
     background-size: cover;
     background-color: grey;
     border-radius: 0px 0px 30px 30px;
@@ -25,14 +25,14 @@
 }
 
 .header:hover {
-    --headbg: url("../assets/images/body.png");
-    --headh: 360px;
+    --headbg: url("../assets/images/Slide\ 16_9\ -\ 1.png");
+    /* --headh: 360px; */
     box-shadow: 0px 0px 20px 0px rgb(73, 73, 73);
 }
 
 .headimg {
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 45%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -41,7 +41,7 @@
 .headimg img {
     -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
     filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
-    height: 190px;
+    height: 250px;
     animation: image-slide 3s cubic-bezier(0.5, 0.5, 0, 1);
     animation-fill-mode: forwards;
 }
@@ -50,11 +50,11 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 22px;
     font-weight: 50px;
-    color: black;
+    color: rgb(54, 53, 53);
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 28%;
+    top: 40%;
     left: 35%;
     z-index: 1;
 }
@@ -63,7 +63,7 @@
     z-index: 1;
     position: absolute;
     display: flex;
-    top: 37%;
+    top: 47%;
     left: 43%;
 }
 .headsub h1{
@@ -123,7 +123,7 @@
     justify-content: center;
     height: 110px;
     width: 70%;
-    margin-top: 260px;
+    margin-top: 370px;
     margin-left: 15%;
     border-radius: 10px;
     transition: 1s;
