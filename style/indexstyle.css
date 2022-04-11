@@ -8,13 +8,13 @@
     animation: normal 1s;
     font-family: "Ubuntu", sans-serif;
     font-weight: 800;
-    background-color: #e4c292;
+    background-color: #fdf0de;
 }
 
 .header {
     display: flex;
     text-align: center;
-    height: var(--headh, 330px);
+    height: var(--headh, 350px);
     top: 0;
     width: 100%;
     background: var(--headbg, center center url("../assets/images/body.png"));
@@ -26,14 +26,14 @@
 
 .header:hover {
     --headbg: url("../assets/images/body.png");
-    --headh: 340px;
+    --headh: 360px;
     box-shadow: 0px 0px 20px 0px rgb(73, 73, 73);
 }
 
 .headimg {
     position: absolute;
     top: 15%;
-    left: 10%;
+    left: 45%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
@@ -41,23 +41,34 @@
 .headimg img {
     -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
     filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
-    height: 100px;
+    height: 190px;
     animation: image-slide 3s cubic-bezier(0.5, 0.5, 0, 1);
     animation-fill-mode: forwards;
 }
 
 .headtext {
-    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
     font-weight: 50px;
     color: black;
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 30%;
-    left: 3%;
+    top: 28%;
+    left: 35%;
     z-index: 1;
 }
 
+.headsub{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    top: 37%;
+    left: 43%;
+}
+.headsub h1{
+    font-size: 18px;
+}
 .fading-effect {
     position: absolute;
     top: 0;
@@ -110,17 +121,19 @@
     background-color: transparent;
     display: flex;
     justify-content: center;
-    height: 80px;
+    height: 110px;
     width: 70%;
-    margin-top: 40px;
+    margin-top: 260px;
+    margin-left: 15%;
     border-radius: 10px;
     transition: 1s;
 }
 
 .navb:hover {
-    background: rgb(5, 0, 97);
-    background: linear-gradient(90deg, rgba(5, 0, 97, 1) 0%, rgba(11, 11, 144, 0.9920343137254902) 35%, rgba(8, 37, 140, 1) 65%, rgba(36, 116, 241, 0.8799894957983193) 100%);
-    box-shadow: 7px 7px 7px 7px grey;
+    background: transparent;
+    /* background: linear-gradient(90deg, rgba(5, 0, 97, 1) 0%, rgba(11, 11, 144, 0.9920343137254902) 35%, rgba(8, 37, 140, 1) 65%, rgba(36, 116, 241, 0.8799894957983193) 100%); */
+    /* box-shadow: 5px 5px 5px 5px grey; */
+    /* opacity: 50%; */
 }
 
 ul {
@@ -133,30 +146,33 @@ ul {
 
 .element {
     /* overflow-x: scroll; */
-    background: rgb(63, 94, 251);
-    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 178, 252, 1) 100%);
-    padding: 15px;
+    background: whitesmoke;
+    /* background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 178, 252, 1) 100%); */
+    padding: 12px;
     font-weight: 700;
     font-size: 1.3em;
     margin: 30px;
     cursor: pointer;
     list-style: none;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 40px;
     transition: 0.4s;
     color: #0b0434;
-}
+}   
 
 .element:hover {
-    color: rgb(14, 88, 206);
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    color: black;
+    background: rgb(143, 210, 247);
     font-size: 1.4em;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px 0px rgb(181, 10, 10);
+    box-shadow: 0 0 5px rgb(143, 210, 247), 0 0 25px rgb(143, 210, 247), 0 0 50px rgb(143, 210, 247) ,0 0 200px rgb(143, 210, 247);
     letter-spacing: 0.12em;
 }
-
+.sou img{
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    height: 50px;
+}
 .card {
     justify-content: center;
     display: flex;
@@ -189,9 +205,11 @@ ul {
 }
 
 .bodys {
-    display: grid;
+    display: flex;
+    width: 100%;
+    /* position: absolute; */
     justify-content: center;
-    padding: 10px 10px 0px 0px;
+    padding: 10px;
     margin-top: var(--mbn, 45px);
     /* top: 0; */
     border-radius: 30px 30px 0px 0px;
@@ -233,16 +251,6 @@ ul {
     100% {
         transform: rotate(360deg);
     }
-}
-
-.carousel {
-    display: flex;
-    top: 3%;
-    left: 68%;
-    height: 300px;
-    width: 400px;
-    background-color: #0c0c0c;
-    opacity: 80%;
 }
 
 @media screen and (max-width: 600px) {
