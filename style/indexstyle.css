@@ -14,7 +14,7 @@
 .header {
     display: flex;
     text-align: center;
-    height: var(--headh, 620px);
+    height: var(--headh, 640px);
     top: 0;
     width: 100%;
     background: var(--headbg, center center url("../assets/images/Slide\ 16_9\ -\ 2.png"));
@@ -28,11 +28,13 @@
     --headbg: url("../assets/images/Slide\ 16_9\ -\ 1.png");
     /* --headh: 360px; */
     box-shadow: 0px 0px 20px 0px rgb(73, 73, 73);
+    --headtxt: rgb(54, 53, 53);
+    --headsub: rgb(54, 53, 53);
 }
 
 .headimg {
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 45%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -41,7 +43,7 @@
 .headimg img {
     -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
     filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
-    height: 250px;
+    height: 300px;
     animation: image-slide 3s cubic-bezier(0.5, 0.5, 0, 1);
     animation-fill-mode: forwards;
 }
@@ -50,11 +52,11 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 22px;
     font-weight: 50px;
-    color: rgb(54, 53, 53);
+    color: var(--headtxt, grey);
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 40%;
+    top: 43%;
     left: 35%;
     z-index: 1;
 }
@@ -63,10 +65,11 @@
     z-index: 1;
     position: absolute;
     display: flex;
-    top: 47%;
+    top: 50%;
     left: 43%;
 }
 .headsub h1{
+    color: var(--headsub, grey);
     font-size: 18px;
 }
 .fading-effect {
@@ -123,7 +126,7 @@
     justify-content: center;
     height: 110px;
     width: 70%;
-    margin-top: 370px;
+    margin-top: 420px;
     margin-left: 15%;
     border-radius: 10px;
     transition: 1s;
@@ -171,7 +174,7 @@ ul {
     top: 5px;
     left: 5px;
     position: absolute;
-    height: 50px;
+    height: 40px;
 }
 .card {
     justify-content: center;
@@ -205,7 +208,7 @@ ul {
 }
 
 .bodys {
-    display: flex;
+    /* display: flex; */
     width: 100%;
     /* position: absolute; */
     justify-content: center;
@@ -224,6 +227,49 @@ ul {
     --mbn: 40px;
 }
 
+.bodys .hof{
+    margin-top: 20px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    top: 90px;
+    width: fit-content;
+    transition: 0.9s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    background: transparent;
+}
+.bodys .line{
+    display: flex;
+    justify-content: center;
+    height: 2px;
+    width: 170px;
+    background: linear-gradient(-45deg,red,blue);
+    margin-bottom: 20px;
+}
+.bodys .hof:hover{
+    letter-spacing: 0.1em;
+    border-radius: 40px;
+    background-color: gray;
+}
+
+.bodys .agendah{
+    margin-top: 20px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    top: 90px;
+    width: fit-content;
+    transition: 0.9s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    background: transparent;
+}
+.bodys .agendah:hover{
+    letter-spacing: 0.1em;
+    border-radius: 40px;
+    background-color: gray;
+}
 
 #loader {
     display: flex;
