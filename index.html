@@ -53,7 +53,7 @@
       <div class="navb">
         <ul class="element-row">
           <!-- <li class="element">Home</li> -->
-          <li class="element" id="eventb">Events</li>
+          <li class="element" id="eventb" onclick="window.open('event.html')">Events</li>
           <li class="element" id="aboutb">About</li>
           <li class="element" id="contactb">Contact</li>
         </ul>
@@ -105,7 +105,7 @@
       </h1>
       <div class="line" style="width: 100px;"></div>
       <div class="agenda"></div>
-      <h1 class="aboutu">
+      <h1 class="aboutu" id="aboutu">
         About Us
       </h1>
       <div class="line" style="width: 130px;"></div>
@@ -119,18 +119,10 @@
   <i class="fa-solid fa-angle-up" id="btop"></i>
   <i class="fa-solid fa-angle-down" id="bbot"></i>
   <script>
-    $("#eventb").click(function () {
-      $("html, body").animate(
-        {
-          scrollTop: $("#event").offset().top,
-        },
-        1200
-      );
-    });
     $("#aboutb").click(function () {
       $("html, body").animate(
         {
-          scrollTop: $("#about").offset().top,
+          scrollTop: $("#aboutu").offset().top,
         },
         1200
       );
