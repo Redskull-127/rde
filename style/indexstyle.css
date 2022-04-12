@@ -14,7 +14,7 @@
 .header {
     display: flex;
     text-align: center;
-    height: var(--headh, 640px);
+    height: 640px;
     top: 0;
     width: 100%;
     background: var(--headbg, center center url("../assets/images/Slide\ 16_9\ -\ 2.png"));
