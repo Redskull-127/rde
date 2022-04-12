@@ -176,7 +176,7 @@ ul {
     position: absolute;
     height: 40px;
 }
-.card {
+/* .card {
     justify-content: center;
     display: flex;
     width: 100%;
@@ -189,7 +189,7 @@ ul {
 .card .card {
     background: transparent;
     padding: 15px;
-}
+} */
 
 #btop {
     position: fixed;
@@ -288,6 +288,25 @@ ul {
 .bodys .about{
     background-color: rgba(119, 118, 118, 0.192);
 }
+.bodys .agenda{
+    background-color: rgba(119, 118, 118, 0.192);
+}
+
+.bodys .agenda .agcon{
+    margin-bottom: 10px;
+}
+
+.bodys .agenda .agcon p{
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.bodys .agenda .agcon a{
+    cursor: pointer;
+    color: #fdf0de;
+}
+
+
 #loader {
     display: flex;
     top: 40%;
