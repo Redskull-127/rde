@@ -281,7 +281,8 @@ ul {
     background-color: gray;
 }
 .bodys .agendacon{
-    background-color: rgba(119, 118, 118, 0.192);
+    background-color: transparent;
+    height: 200px;
     display: flex;
     justify-content: center;
     margin: 10px;
