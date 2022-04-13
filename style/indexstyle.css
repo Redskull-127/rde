@@ -389,7 +389,7 @@ ul {
     }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     @keyframes image-slide {
         0% {
             transform: translatex(-150px) scale(0);
@@ -434,4 +434,4 @@ ul {
         overflow: scroll;
         left: 0;
     }
-}
+} */
