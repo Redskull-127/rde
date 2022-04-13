@@ -282,7 +282,7 @@ ul {
 }
 .bodys .agendacon{
     background-color: transparent;
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: center;
     margin: 10px;
@@ -315,9 +315,10 @@ ul {
     background-color: gray;
 }
 .bodys .about{
-    background-color: rgba(119, 118, 118, 0.192);
+    background-color: transparent;
 }
 .bodys .agenda{
+    margin: 20px;
     background-color: rgba(119, 118, 118, 0.192);
 }
 
@@ -341,6 +342,7 @@ ul {
     justify-content: center;
 }
 .meetlead img{
+    cursor: pointer;
     height: 350px;
 }
 
@@ -355,6 +357,7 @@ ul {
 }
 
 .meetmembers img{
+    cursor: pointer;
     height: 350px;
 }
 
