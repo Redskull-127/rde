@@ -34,8 +34,8 @@
 
 .headimg {
     position: absolute;
-    top: 28%;
-    left: 45%;
+    top: 13%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
@@ -44,9 +44,11 @@
     -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
     filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
     height: 300px;
-    animation: image-slide 3s cubic-bezier(0.5, 0.5, 0, 1);
+    animation: imgmove 4s linear infinite;
     animation-fill-mode: forwards;
 }
+
+
 
 .headtext {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -65,7 +67,7 @@
     z-index: 1;
     position: absolute;
     display: flex;
-    top: 50%;
+    top: 52%;
     left: 43%;
 }
 .headsub h1{
@@ -79,6 +81,16 @@
     right: 0;
     width: 100%;
     background: transparent;
+}
+
+@keyframes imgmove{
+    0%,
+    100%{
+        transform: translateY(50px);
+    }
+    50%{
+        transform: translateY(100px);
+    }
 }
 
 @keyframes image-slide {
@@ -216,7 +228,7 @@ ul {
     margin-top: var(--mbn, 45px);
     /* top: 0; */
     border-radius: 30px 30px 0px 0px;
-    background: var(--bodysbg, url(../assets/images/bodybg.png));
+    background: #f5f5f5;
     transition: 0.8s;
 }
 
@@ -268,6 +280,22 @@ ul {
     border-radius: 40px;
     background-color: gray;
 }
+.bodys .agendacon{
+    background-color: rgba(119, 118, 118, 0.192);
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.bodys .agendacon p{
+    padding-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3em;
+    word-spacing: 0.1em;
+    font-weight: 700;
+}
+.bodys .agendacon h4{
+    display: inline-block;
+}
 .bodys .aboutu{
     margin-top: 20px;
     padding: 10px;
@@ -303,7 +331,7 @@ ul {
 
 .bodys .agenda .agcon a{
     cursor: pointer;
-    color: #fdf0de;
+    color: #e8a13d;
 }
 
 
