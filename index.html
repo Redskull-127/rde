@@ -59,7 +59,7 @@
           </li>
           <li class="element" id="aboutb">About</li>
           <li class="element" id="contactb">Contact</li>
-          <li class="element" id="joinb">Apply!</li>
+          <li class="element" id="joinb" onclick="joinalert();">Apply!</li>
         </ul>
       </div>
       <div class="sou">
@@ -129,14 +129,16 @@
           <img src="assets/members/KrushilShah.png" alt="Krushil Shah - Desgining" class="memimg">
         </div>
       </div>
-      <div class="agenda">
-        <img src="assets/images/LOGO2.png" height="200" alt="" />
+      <div class="agenda" id="contact">
+        <img src="assets/images/LOGO3.png" height="100" alt="" />
         <div class="agcon">
           <p>
             <a href="#">RDE</a> is a club based inside
             <a href="https://silveroakuni.ac.in">Silver Oak University</a> and
             runs on a moto <br />To "Grow Together!"
           </p>
+          <h3 class="fa-solid fa-location-dot" onclick="window.open('https://goo.gl/maps/NJgZ6BvmK5WjYR2r6')"> : Silver Oak University Opp. Bhagwat Vidyapith<br/> S. G. Road, Gota, Ahmedabad - 382481</h3>
+          <br><h3 class="fa-solid fa-envelope" onclick="window.open('mailto:redskull@duck.com')"> : redskull@duck.com</h3>
         </div>
       </div>
     </div>
@@ -172,7 +174,7 @@
     $("#bbot").click(function () {
       $("html, body").animate(
         {
-          scrollTop: $("#about").offset().top,
+          scrollTop: $("#contact").offset().top,
         },
         1200
       );

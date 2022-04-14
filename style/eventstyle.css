@@ -4,13 +4,13 @@
 }
 
 body{
-    background: url(../assets/images/Slide\ 16_9\ -\ 2.png);
+    background: center center url(../assets/images/Slide\ 16_9\ -\ 2.png);
     /* display: flex; */
     transition: 0.9s;
 }
 
 body:hover{
-    background: url(../assets/images/Slide\ 16_9\ -\ 1.png);
+    background: center center url(../assets/images/Slide\ 16_9\ -\ 1.png);
     background-size: cover;
 }
 .container{
