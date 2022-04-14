@@ -490,4 +490,7 @@ ul {
     letter-spacing: 1.2px;
     line-height: 15px;
   }
+  .sou img{
+    z-index: 2;
+  }
 }
