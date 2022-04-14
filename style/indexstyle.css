@@ -11,7 +11,7 @@
 }
 
 .header {
-  display: flex;
+  /* display: flex; */
   text-align: center;
   height: 640px;
   top: 0;
@@ -58,11 +58,12 @@
   font-size: 22px;
   font-weight: 50px;
   color: var(--headtxt, grey);
-  position: absolute;
+  position: static;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
-  top: 43%;
-  left: 35%;
+  padding-top: 270px;
+  padding-left: 2%;
   z-index: 1;
 }
 
@@ -140,7 +141,7 @@
   justify-content: center;
   /* height: 150px; */
   width: 70%;
-  margin-top: 420px;
+  margin-top: 100px;
   margin-left: 15%;
   border-radius: 10px;
   transition: 1s;
@@ -371,6 +372,8 @@ ul {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .meet h1 {
