@@ -30,8 +30,8 @@
   --headbg: url("../assets/images/Slide\ 16_9\ -\ 1.png");
   /* --headh: 360px; */
   box-shadow: 0px 0px 20px 0px rgb(73, 73, 73);
-  --headtxt: rgb(54, 53, 53);
-  --headsub: rgb(54, 53, 53);
+  --headtxt: rgb(27, 27, 27);
+  --headsub: rgb(27, 27, 27);
 }
 
 .headimg {
@@ -134,6 +134,10 @@
   }
 }
 
+.dropdown {
+  display: none;
+}
+
 .navb {
   overflow-y: hidden;
   background-color: transparent;
@@ -176,6 +180,7 @@ ul {
   border-radius: 40px;
   transition: 0.4s;
   color: #0b0434;
+  z-index: 2;
 }
 
 .element:hover {
@@ -320,6 +325,9 @@ ul {
   background-color: gray;
 }
 .bodys .about {
+  display: flex;
+  justify-content: center;
+  height: 200px;
   background-color: transparent;
 }
 .bodys .agenda {
@@ -327,7 +335,7 @@ ul {
   background-color: rgba(119, 118, 118, 0.192);
 }
 
-.bodys .agenda  img{
+.bodys .agenda img {
   margin: 20px;
 }
 
@@ -414,49 +422,42 @@ ul {
   }
 }
 
-/* @media screen and (max-width: 600px) {
-    @keyframes image-slide {
-        0% {
-            transform: translatex(-150px) scale(0);
-        }
+@media screen and (max-width: 845px) {
+  .header {
+    width: 100%;
+  }
 
-        60% {
-            transform: translatex(-150px) scale(1);
-        }
+  .headsub {
+    left: 20%;
+  }
 
-        90% {
-            transform: translatex(155px) scale(1);
-        }
+  .navb {
+    display: none;
+    z-index: 0;
+  }
 
-        100% {
-            transform: translatex(155px) scale(1);
-        }
-    }
-    .body1{
-        display: flex;
-    }
-    .header{
-        height: 250px;
-    }
-    .carousel {
-        display: none;
-    }
+  .meetmembers img {
+    height: 220px;
+    margin: 10px;
+  }
 
-    .headtext {
-        font-size: 20px;
-        font-weight: 700;
-        color: black;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 26%;
-        left: 11%;
-        z-index: 1;
-    }
+  .meetlead img {
+    height: 220px;
+    margin: 10px;
+  }
 
-    .navb {
-        width: 375px;
-        overflow: scroll;
-        left: 0;
-    }
-} */
+  .headtext {
+    font-size: 22px;
+    font-weight: 50px;
+    color: var(--headtxt, grey);
+    position: absolute;
+    display: flex;
+    padding-top: 290px;
+    padding-left: 10%;
+  }
+
+  .dropdown{
+    float: right;
+    display: block;
+  }
+}
