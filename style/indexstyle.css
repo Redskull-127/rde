@@ -361,10 +361,21 @@ ul {
 }
 
 .meetlead {
-  margin: 10px;
+  margin: 5px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-evenly;
 }
+
+.agendacon2{
+  display: block;
+}
+
+.agendacon2 img{
+  height: 30px;
+  animation: ease-in 1s ;
+}
+
 .meetlead img {
   transition: 1s;
   cursor: pointer;
@@ -373,7 +384,7 @@ ul {
 .memimg:hover {
   transform: scale(1.1);
   background: transparent;
-  z-index: 2;
+  z-index: 1;
   box-shadow: 0px 0px 0px #000;
 }
 .meetmembers {
@@ -397,7 +408,7 @@ ul {
 #loader {
   display: flex;
   top: 40%;
-  left: 45%;
+  left: 35%;
   justify-self: center;
   background: black black center center;
   background-color: transparent;
@@ -459,5 +470,24 @@ ul {
   .dropdown{
     float: right;
     display: block;
+  }
+
+  .agendacon2 img{
+    height: 15px;
+    animation: ease-in 1s ;
+  }
+
+  .bodys .agenda .agcon p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .bodys .agenda .agcon h3 {
+    margin: 20px;
+    cursor: pointer;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    line-height: 15px;
   }
 }

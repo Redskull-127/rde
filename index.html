@@ -51,7 +51,7 @@
           <h1>Innovation With Educators</h1>
         </div>
       </div>
-      
+
       <div class="navb">
         <ul class="element-row">
           <!-- <li class="element">Home</li> -->
@@ -65,21 +65,23 @@
       </div>
 
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle fa-solid fa-bars"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          
+        <button class="btn btn-secondary dropdown-toggle fa-solid fa-bars" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li class="element" id="eventb" onclick="window.open('event.html')">
             Events
           </li>
-          <li class="element" id="aboutb">About</li>
-          <li class="element" id="contactb">Contact</li>
+          <li class="element" id="aboutm">About</li>
+          <li class="element" id="contactm">Contact</li>
           <li class="element" id="joinb" onclick="joinalert();">Apply!</li>
         </ul>
       </div>
 
       <div class="sou">
-        <img src="https://silveroakuni.ac.in/upload/images/250x70.png" alt="Silver Oak University" onclick="window.open('https://silveroakuni.ac.in')"/>
+        <img src="https://silveroakuni.ac.in/upload/images/250x70.png" alt="Silver Oak University"
+          onclick="window.open('https://silveroakuni.ac.in')" />
       </div>
     </div>
 
@@ -127,14 +129,25 @@
       <!-- Agenda -->
       <h1 class="agendah">Agenda</h1>
       <div class="line" style="width: 100px"></div>
-      <div class="agendacon">
+      <!-- <div class="agendacon">
         <img src="assets/images/We-are-here-to-grow-together-unscreen.gif" alt="">
+      </div> -->
+
+      <div class="agendacon2">
+        <img src="assets/agenda/1grow together_.png" alt=""><br/>
+        <img src="assets/agenda/2career path_.png"  alt=""><br/>
+        <img src="assets/agenda/3your knowledge_.png"  alt=""><br/>
+        <img src="assets/agenda/4job perfect_.png"  alt=""><br/>
+        <img src="assets/agenda/5guide you_.png"  alt=""><br/>
+        <img src="assets/agenda/6successful.png"  alt=""><br/>
+        <img src="assets/agenda/7grow together.png"  alt="">
       </div>
 
       <div class="meet">
         <h1>Meet Our Team</h1>
         <div class="line" style="width: 220px;margin-bottom:50px;"></div>
         <div class="meetlead">
+          <img src="assets/members/MeghnaPanara.png" alt="MeghnaPanara - Head" class="memimg">
           <img src="assets/members/MeerTarbani.png" alt="Meer Tarbani - Lead"
             onclick="window.open('https://redskull.me')" class="memimg">
         </div>
@@ -152,7 +165,7 @@
       <div class="agenda" id="contact">
         <img src="assets/images/LOGO3.png" height="100" alt="" />
         <div class="agcon">
-          <p>̥
+          <p>
             <a href="#">RDE</a> is a club based inside
             <a href="https://silveroakuni.ac.in">Silver Oak University</a> and
             runs on a moto <br />To "Grow Together!"
@@ -177,7 +190,23 @@
         1200
       );
     });
+    $("#aboutm").click(function () {
+      $("html, body").animate(
+        {
+          scrollTop: $("#aboutu").offset().top,
+        },
+        1200
+      );
+    });
     $("#contactb").click(function () {
+      $("html, body").animate(
+        {
+          scrollTop: $("#contact").offset().top,
+        },
+        1200
+      );
+    });
+    $("#contactm").click(function () {
       $("html, body").animate(
         {
           scrollTop: $("#contact").offset().top,
