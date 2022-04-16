@@ -65,6 +65,23 @@ body:hover{
     animation: ziper 1.8s ease-in-out;
 }
 
+.notify{
+    height: 90%;
+    width: 100%;
+    background-color: antiquewhite;
+    /* z-index: 1; */
+    position: absolute;
+    display: block;
+    justify-self: center;
+    justify-content: space-evenly;
+}
+
+.notify h1{
+    margin: 50px;
+    font-size: 35px;
+}
+
+
 @keyframes ziper {
     0%{
         box-shadow: 0 0 40px red,
@@ -85,5 +102,9 @@ body:hover{
         width: 320px;
         height: fit-content;
         background-size: 50px;
+    }
+    .notify h1{
+        margin: 50px;
+        font-size: 20px;
     }
 }
