@@ -37,7 +37,7 @@ body:hover{
     flex-direction: column;
     justify-content: center;
     background-color: antiquewhite;
-    height: 170px;
+    height: 180px;
     width: 1000px;
     margin: 20px;
     border-radius: 20px;
@@ -58,8 +58,7 @@ body:hover{
 
 .entries button{
     height: 50px;
-    float: right;
-    /* position: absolute; */
+    border-radius: 0 0 20px 20px;
 }
 
 .entries:hover{
