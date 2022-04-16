@@ -26,7 +26,7 @@ body:hover{
     background-color: rgba(0, 0, 0, 0.384);
     height: 500px;
     width: 1200px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
