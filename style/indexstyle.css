@@ -198,6 +198,12 @@ ul {
   position: absolute;
   height: 40px;
 }
+
+#carimg{
+  height: 200px;
+  width: 900px;
+}
+
 /* .card {
     justify-content: center;
     display: flex;
@@ -510,5 +516,10 @@ ul {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
+  }
+
+  #carimg{
+    height: 130px;
+    width: 390px;
   }
 }
