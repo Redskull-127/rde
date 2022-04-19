@@ -235,6 +235,29 @@ ul {
   font-size: 30px;
 }
 
+.evinfo{
+  background-color: #f5f5f5;
+  margin-top: 35px;
+  border-radius: 30px;
+}
+
+.evinfo h1{
+  font-weight: 800;
+}
+
+.evinfo p{
+  margin: 30px;
+  font-size: 25px;
+}
+
+.evinfo b{
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.evinfo button{
+  margin: 20px;
+}
 .bodys {
   /* display: flex; */
   width: 100%;
@@ -265,7 +288,7 @@ ul {
   font-weight: 400;
   background: transparent;
 }
-.bodys .line {
+ .line {
   display: flex;
   justify-content: center;
   height: 2px;
