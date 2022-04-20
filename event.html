@@ -11,6 +11,7 @@
   <!-- Title -->
   <title>RDE</title>
   <!-- Script -->
+  <script src="script/firebase.js" type="module"></script>
   <script src="script/eventscript.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Style -->
@@ -46,13 +47,13 @@
     </div>
     <h1 class="heading">Up-coming Events</h1>
     <div class="upcoming">
-      <div class="entries" onclick="lert();">
+      <div class="entries" >
         <div class="details">
           <h1>Session - I</h1>
           <h2>Introduction To RDE</h2>
           <p><i class="fa-solid fa-location-dot"></i> : Offline/Online (Live Soon)</p>
         </div>
-        <button type="button" class="btn btn-success">Registration Will Open Soon...</button>
+        <button type="button" class="btn btn-success" id="ann">Registration Will Open Soon...</button>
       </div>
     </div>
   </center>

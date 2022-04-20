@@ -1,3 +1,3 @@
-function lert() {
-  alert("Registration Not Open Yet");
-}
+// function lert() {
+//   alert("Registration Not Open Yet");
+// }
