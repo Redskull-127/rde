@@ -34,30 +34,20 @@ remoteConfig.settings = {
 };
 
 remoteConfig.defaultConfig = {
-  annfb: false,
-  annlink: '#',
+    news : '!'
 };
 
-const ann = document.getElementById('ann');
-
+const alertfb = document.getElementById('alertfb');
+const alertbox = document.getElementById('alertbox');
 fetchAndActivate(remoteConfig)
   .then(() => {
-    const anno = getValue(remoteConfig, "annfb").asBoolean();
-    if (anno) {
-      console.log("True");
-      ann.innerHTML = 'Register Now...'
-      const annolink = getValue(remoteConfig, "annlink").asString();
-      ann.addEventListener('click', function(){
-          window.open(annolink, '_blank');
-      })
-    } else {
-      console.log("False");
-      ann.innerHTML = 'Registration Will Open Soon...'
-      ann.addEventListener('click',function(){
-        alert("Registration Not Opened Yet");
-      })
-    }
-
+   const newsfb = getValue(remoteConfig, "news").asString();
+   if(newsfb != 'null'){
+       alertfb.innerHTML = newsfb;
+   }
+   else{
+        alertbox.style.display = "none";
+   }
   })
   .catch((err) => {
     console.log(err)

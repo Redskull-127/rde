@@ -11,7 +11,7 @@
   <!-- Title -->
   <title>RDE</title>
   <!-- Script -->
-  <script src="script/firebase.js" type="module"></script>
+  <script src="script/firebasei.js" type="module"></script>
   <script src="script/indexscript.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Style -->
@@ -41,6 +41,10 @@
   <center>
     <div class="loader" id="loader"></div>
     <div class="header" id="header">
+      <div class="alert alert-dark alert-dismissible fade show" role="alert" id="alertbox">
+        <i class="bi bi-broadcast"></i> : <strong id="alertfb"></strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
       <div class="headbody">
         <div class="headimg">
           <img src="assets/images/LOGO3.png" alt="RDE" onclick="welcome()" height="90" />
