@@ -11,6 +11,8 @@
   <!-- Title -->
   <title>RDE</title>
   <!-- Script -->
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
   <script src="script/firebase.js" type="module"></script>
   <script src="script/eventscript.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -47,6 +49,15 @@
       <h1>You Should Currently Enrolled In<br />Any Field Related To Tech...</h1>
       <button type="button" class="btn btn-dark" id="notifyclose">Accept</button>
     </div>
+    <div id="getemail">
+        <label for="exampleFormControlInput1" class="form-label">Enter Your Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <button type="button" class="btn btn-dark" id="emailbutton">Continue</button>
+    </div>
+    <div id="successdiv" class="successdiv">
+      <h1 id="success"></h1>
+      <button type="button" class="btn btn-dark " id="infobtn">Close</button>
+    </div>
     <h1 class="heading">Up-coming Events</h1>
     <div class="upcoming ">
       <div class="entries" >
@@ -58,11 +69,17 @@
         <button type="button" class="btn btn-success" id="ann">Registration Will Open Soon...</button>
       </div>
     </div>
+    <button type="button" id="testing">Send Mail</button>
   </center>
   <script type="text/javascript">
     $(function () {
       $("#notifyclose").click(function () {
         $('.notify').hide();
+      });
+    });
+    $(function () {
+      $("#infobtn").click(function () {
+        $('.successdiv').hide();
       });
     });
   </script>
