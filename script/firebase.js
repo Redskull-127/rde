@@ -39,7 +39,8 @@ remoteConfig.defaultConfig = {
   annlink: '#',
   titan_id: '',
   titan_pass: '',
-  titan_body: ''
+  titan_body: '',
+  titan_sub: ''
 };
 
 const ann = document.getElementById('ann');
@@ -60,7 +61,7 @@ emailbutton.addEventListener('click',function(){
     Password : titan_pass,
     To : emailvalue.value,
     From : titan_id,
-    Subject : "Working Bruh",
+    Subject : titan_sub,
     Body : titan_body,
     }).then(
       showinfotxt.innerHTML = "<center><h1>Success!</h1><br/><h1>Check Your Mail!</h1></center>"
@@ -72,6 +73,7 @@ emailbutton.addEventListener('click',function(){
 let titan_id;
 let titan_pass;
 let titan_body;
+let titan_sub;
 
 fetchAndActivate(remoteConfig)
   .then(() => {
@@ -93,26 +95,27 @@ fetchAndActivate(remoteConfig)
     titan_id = getValue(remoteConfig, "titan_id").asString();
     titan_pass = getValue(remoteConfig, "titan_pass").asString();
     titan_body = getValue(remoteConfig, "titan_body").asString();
+    titan_sub = getValue(remoteConfig, "titan_sub").asString();
   })
   .catch((err) => {
     console.log(err)
   });
 
-  function sendEmail() {
-    Email.send({
-    Host: "smtp.titan.email",
-    port: 465,
-    Username : titan_id,
-    Password : titan_pass,
-    To : 'meerraja17@gmail.com',
-    From : titan_id,
-    Subject : "Working Bruh",
-    Body : titan_body,
-    }).then(
-      function(){alert("mail sent successfully")}
-    );
-  }
+  // function sendEmail() {
+  //   Email.send({
+  //   Host: "smtp.titan.email",
+  //   port: 465,
+  //   Username : titan_id,
+  //   Password : titan_pass,
+  //   To : 'meerraja17@gmail.com',
+  //   From : titan_id,
+  //   Subject : "Working Bruh",
+  //   Body : titan_body,
+  //   }).then(
+  //     function(){alert("mail sent successfully")}
+  //   );
+  // }
 
-  testing.addEventListener('click', function() {
-    sendEmail();
-  })
+  // testing.addEventListener('click', function() {
+  //   sendEmail();
+  // })
