@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
-import 'https://smtpjs.com/v3/smtp.js';
+import "https://smtpjs.com/v3/smtp.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
 import { getPerformance } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js";
 import {
   getRemoteConfig,
@@ -28,6 +29,8 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const perf = getPerformance(app);
 const remoteConfig = getRemoteConfig(app);
+const db = getFirestore(app);
+
 
 remoteConfig.settings = {
   fetchTimeMillis: 60000,
@@ -36,40 +39,57 @@ remoteConfig.settings = {
 
 remoteConfig.defaultConfig = {
   annfb: false,
-  annlink: '#',
-  titan_id: '',
-  titan_pass: '',
-  titan_body: '',
-  titan_sub: ''
+  annlink: "#",
+  titan_id: "",
+  titan_pass: "",
+  titan_body: "",
+  titan_sub: "",
 };
 
-const ann = document.getElementById('ann');
-const testing = document.getElementById('testing');
-const getemail = document.getElementById('getemail');
-const showinfo = document.getElementById('successdiv');
-let showinfotxt = document.getElementById('success');
-let emailvalue = document.getElementById('exampleFormControlInput1');
-const emailbutton = document.getElementById('emailbutton');
-emailbutton.addEventListener('click',function(){
+const ann = document.getElementById("ann");
+const testing = document.getElementById("testing");
+const getemail = document.getElementById("getemail");
+const showinfo = document.getElementById("successdiv");
+let showinfotxt = document.getElementById("success");
+let emailvalue = document.getElementById("exampleFormControlInput1");
+const emailbutton = document.getElementById("emailbutton");
+const username = document.getElementById("exampleFormControlInput2");
+emailbutton.addEventListener("click", function () {
   getemail.style.display = "none";
   showinfo.style.display = "block";
-  showinfotxt.innerHTML = "<center><h1>Please Wait!</h1></center>"
+  showinfotxt.innerHTML = "<center><h1>Please Wait!</h1></center>";
   Email.send({
     Host: "smtp.titan.email",
     port: 465,
-    Username : titan_id,
-    Password : titan_pass,
-    To : emailvalue.value,
-    From : titan_id,
-    Subject : titan_sub,
-    Body : titan_body,
-    }).then(
-      showinfotxt.innerHTML = "<center><h1>Success!</h1><br/><h1>Check Your Mail!</h1></center>"
-    ).catch((errorinfo) => {
+    Username: titan_id,
+    Password: titan_pass,
+    To: emailvalue.value,
+    From: titan_id,
+    Subject: username.value + ',' + titan_sub,
+    Body: titan_body,
+  })
+    .then(
+      (showinfotxt.innerHTML =
+        "<center><h1>Success!</h1><br/><h1>Check Your Mail!</h1></center>")
+    )
+    .catch((errorinfo) => {
       showinfotxt.innerHTML = errorinfo;
       console.log(errorinfo);
     });
-})
+    try {
+      const docRef =  addDoc(collection(db, "users"), {
+        email : emailvalue.value,
+        name : username.value
+      });
+      console.log("Document written with ID: ", docRef.id);
+      showinfotxt.innerHTML =
+        "<center><h1>Success!</h1><br/><h1>Registration Saved!</h1></center>"
+    } catch (e) {
+      console.error("Error adding Registration: ", e);
+      showinfotxt.innerHTML =
+        "<center><h1>Success!</h1><br/><h1>Registration Failed</h1></center>"
+    }
+});
 let titan_id;
 let titan_pass;
 let titan_body;
@@ -80,17 +100,17 @@ fetchAndActivate(remoteConfig)
     const anno = getValue(remoteConfig, "annfb").asBoolean();
     if (anno) {
       console.log("True");
-      ann.innerHTML = 'Register Now...'
+      ann.innerHTML = "Register Now...";
       const annolink = getValue(remoteConfig, "annlink").asString();
-      ann.addEventListener('click', function(){
-         getemail.style.display = "block";
-      })
+      ann.addEventListener("click", function () {
+        getemail.style.display = "block";
+      });
     } else {
       console.log("False");
-      ann.innerHTML = 'Registration Will Open Soon...'
-      ann.addEventListener('click',function(){
+      ann.innerHTML = "Registration Will Open Soon...";
+      ann.addEventListener("click", function () {
         alert("Registration Not Opened Yet");
-      })
+      });
     }
     titan_id = getValue(remoteConfig, "titan_id").asString();
     titan_pass = getValue(remoteConfig, "titan_pass").asString();
@@ -98,24 +118,5 @@ fetchAndActivate(remoteConfig)
     titan_sub = getValue(remoteConfig, "titan_sub").asString();
   })
   .catch((err) => {
-    console.log(err)
+    console.log(err);
   });
-
-  // function sendEmail() {
-  //   Email.send({
-  //   Host: "smtp.titan.email",
-  //   port: 465,
-  //   Username : titan_id,
-  //   Password : titan_pass,
-  //   To : 'meerraja17@gmail.com',
-  //   From : titan_id,
-  //   Subject : "Working Bruh",
-  //   Body : titan_body,
-  //   }).then(
-  //     function(){alert("mail sent successfully")}
-  //   );
-  // }
-
-  // testing.addEventListener('click', function() {
-  //   sendEmail();
-  // })

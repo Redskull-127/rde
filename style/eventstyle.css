@@ -81,6 +81,12 @@ body:hover{
     font-size: 35px;
 }
 
+#newsbtn{
+    width: fit-content;
+    height: 10px;
+    margin: 5px;
+}
+
 #getemail{
     position: absolute;
     top: 50%;
@@ -90,8 +96,9 @@ body:hover{
     height: 200px;
     display: none;
     justify-content: space-between;
-    padding-top: 50px;
+    padding:10px;
     background-color: aliceblue;
+    border-radius: 8px;
 }
 
 #successdiv{
@@ -104,17 +111,13 @@ body:hover{
     height: 200px;
     display: none;
 }
+
 @keyframes ziper {
     0%{
         box-shadow: 0 0 40px red,
         0 0 60px blueviolet;
     }
 }
-
-
-
-
-
 
 @media screen and (max-width: 845px) {
     .upcoming{
@@ -128,5 +131,8 @@ body:hover{
     .notify h1{
         margin: 50px;
         font-size: 20px;
+    }
+    #getemail{
+        width: 350px;
     }
 }

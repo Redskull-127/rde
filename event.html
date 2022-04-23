@@ -49,10 +49,13 @@
       <h1>You Should Currently Enrolled In<br />Any Field Related To Tech...</h1>
       <button type="button" class="btn btn-dark" id="notifyclose">Accept</button>
     </div>
-    <div id="getemail">
+    <div id="getemail" class="getemail">
         <label for="exampleFormControlInput1" class="form-label">Enter Your Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+        <label for="exampleFormControlInput1" class="form-label">Enter Your Full-Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Full-Name" required>
         <button type="button" class="btn btn-dark" id="emailbutton">Continue</button>
+        <button type="button" class="btn btn-dark" id="getclose">Close</button>
     </div>
     <div id="successdiv" class="successdiv">
       <h1 id="success"></h1>
@@ -63,8 +66,8 @@
       <div class="entries" >
         <div class="details">
           <h1>Session - I</h1>
-          <h2>Introduction To RDE</h2>
-          <p><i class="fa-solid fa-location-dot"></i> : Offline/Online (Live Soon)</p>
+          <h2>LinkedIn-101</h2>
+          <p><i class="fa-solid fa-location-dot"></i> : Offline/Online (29th April, Friday)</p>
         </div>
         <button type="button" class="btn btn-success" id="ann">Registration Will Open Soon...</button>
       </div>
@@ -80,6 +83,11 @@
     $(function () {
       $("#infobtn").click(function () {
         $('.successdiv').hide();
+      });
+    }); 
+    $(function () {
+      $("#getclose").click(function () {
+        $('.getemail').hide();
       });
     });
   </script>
