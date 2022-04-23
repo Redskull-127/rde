@@ -74,7 +74,8 @@ loginbtn.addEventListener('click', function(){
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    console.log(user)
+    console.log(user);
+    window.open('private.html')
     // ...
   })
   .catch((error) => {
@@ -83,3 +84,9 @@ loginbtn.addEventListener('click', function(){
     idp.innerHTML = '<h1>Error</h1><br/><p>' + error.code + '<br/>' + error.message;
   });
 })
+
+function load() {
+  if(user){
+    console.log("Working");
+  }
+}
