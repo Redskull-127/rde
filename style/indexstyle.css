@@ -456,6 +456,26 @@ ul {
   height: 350px;
 }
 
+#loginbtn{
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  transform: translate(-50%,-50%);
+}
+
+.idp{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #e8a13d;
+  z-index: 15;
+  padding: 15px;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
 #loader {
   display: flex;
   top: 40%;

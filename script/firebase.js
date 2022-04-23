@@ -52,13 +52,21 @@ const getemail = document.getElementById("getemail");
 const showinfo = document.getElementById("successdiv");
 let showinfotxt = document.getElementById("success");
 let emailvalue = document.getElementById("exampleFormControlInput1");
+
 const emailbutton = document.getElementById("emailbutton");
 const username = document.getElementById("exampleFormControlInput2");
+
 emailbutton.addEventListener("click", function () {
   getemail.style.display = "none";
   showinfo.style.display = "block";
   showinfotxt.innerHTML = "<center><h1>Please Wait!</h1></center>";
-  Email.send({
+  if(emailvalue.value == '' || username.value == ''){
+    showinfotxt.innerHTML = "<center><h1>Please Enter Required Details!</h1></center>";
+    console.log("working")
+  }
+  else
+  {
+    Email.send({
     Host: "smtp.titan.email",
     port: 465,
     Username: titan_id,
@@ -89,6 +97,7 @@ emailbutton.addEventListener("click", function () {
       showinfotxt.innerHTML =
         "<center><h1>Success!</h1><br/><h1>Registration Failed</h1></center>"
     }
+  }
 });
 let titan_id;
 let titan_pass;

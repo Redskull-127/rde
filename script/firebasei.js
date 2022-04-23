@@ -2,6 +2,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js";
 import { getPerformance } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js";
 import {
   getRemoteConfig,
   getValue,
@@ -20,6 +22,7 @@ const firebaseConfig = {
   messagingSenderId: "54088217334",
   appId: "1:54088217334:web:afc92801dd5ad8a6d4b2d7",
   measurementId: "G-Q8HB92LX0X",
+  
 };
 
 // Initialize Firebase
@@ -27,6 +30,14 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const perf = getPerformance(app);
 const remoteConfig = getRemoteConfig(app);
+const auth = getAuth();
+const appCheck = initializeAppCheck(app, {
+  provider: new ReCaptchaV3Provider('6LdEZ5YfAAAAAFbBJ9zqAuRWvyuvkAxH0HspUtUq'),
+
+  // Optional argument. If true, the SDK automatically refreshes App Check
+  // tokens as needed.
+  isTokenAutoRefreshEnabled: true
+});
 
 remoteConfig.settings = {
   fetchTimeMillis: 60000,
@@ -54,3 +65,21 @@ fetchAndActivate(remoteConfig)
   });
 
 
+const idp = document.getElementById('idp');
+const rdemail = document.getElementById('emailrde');
+const passrde = document.getElementById('passrde');
+const loginbtn = document.getElementById('loginrde');
+loginbtn.addEventListener('click', function(){
+  signInWithEmailAndPassword(auth, rdemail, passrde)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    idp.innerHTML = '<h1>Error</h1><br/><p>' + error.code + '<br/>' + error.message;
+  });
+})
