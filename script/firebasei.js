@@ -70,7 +70,7 @@ const rdemail = document.getElementById('emailrde');
 const passrde = document.getElementById('passrde');
 const loginbtn = document.getElementById('loginrde');
 loginbtn.addEventListener('click', function(){
-  signInWithEmailAndPassword(auth, rdemail, passrde)
+  signInWithEmailAndPassword(auth, rdemail.value, passrde.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
