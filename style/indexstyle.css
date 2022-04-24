@@ -26,12 +26,12 @@
   transition: 0.8s;
 }
 
-.alert{
+.alert {
   position: absolute;
   z-index: 11;
   top: 30px;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: fit-content;
 }
 
@@ -77,7 +77,7 @@
   position: absolute;
   top: 45%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: fit-content;
 }
 
@@ -85,7 +85,7 @@
   position: absolute;
   left: 50%;
   top: 52%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 .headsub h1 {
   color: var(--headsub, grey);
@@ -165,7 +165,7 @@
   position: absolute;
   top: 79%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .navb:hover {
@@ -216,7 +216,7 @@ ul {
   height: 40px;
 }
 
-#carimg{
+#carimg {
   height: 200px;
   width: 900px;
 }
@@ -254,27 +254,27 @@ ul {
   color: #e8a13d;
 }
 
-.evinfo{
+.evinfo {
   background-color: #f5f5f5;
   margin-top: 35px;
   border-radius: 30px;
 }
 
-.evinfo h1{
+.evinfo h1 {
   font-weight: 800;
 }
 
-.evinfo p{
+.evinfo p {
   margin: 30px;
   font-size: 25px;
 }
 
-.evinfo b{
+.evinfo b {
   font-weight: 800;
   font-size: 30px;
 }
 
-.evinfo button{
+.evinfo button {
   margin: 20px;
 }
 .bodys {
@@ -307,7 +307,7 @@ ul {
   font-weight: 400;
   background: transparent;
 }
- .line {
+.line {
   display: flex;
   justify-content: center;
   height: 2px;
@@ -417,13 +417,13 @@ ul {
   justify-content: space-evenly;
 }
 
-.agendacon2{
+.agendacon2 {
   display: block;
 }
 
-.agendacon2 img{
+.agendacon2 img {
   height: 30px;
-  animation: ease-in 1s ;
+  animation: ease-in 1s;
 }
 
 .meetlead img {
@@ -456,19 +456,19 @@ ul {
   height: 350px;
 }
 
-#loginbtn{
+#loginbtn {
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 0%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.idp{
+.idp {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: #e8a13d;
   z-index: 15;
   padding: 15px;
@@ -476,12 +476,12 @@ ul {
   border-radius: 15px;
 }
 
-.admin{
+.admin {
   z-index: 11;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: #e8a13d;
   width: 350px;
   height: 200px;
@@ -526,7 +526,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: fit-content;
   }
 
@@ -535,11 +535,11 @@ ul {
     z-index: 0;
   }
 
-  #alertbox{
+  #alertbox {
     position: absolute;
     top: 65%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 
   .meetmembers img {
@@ -559,17 +559,20 @@ ul {
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 
-  .dropdown{
+  #loginbtn {
+    display: none;
+  }
+  .dropdown {
     float: right;
     display: block;
   }
 
-  .agendacon2 img{
+  .agendacon2 img {
     height: 15px;
-    animation: ease-in 1s ;
+    animation: ease-in 1s;
   }
 
   .bodys .agenda .agcon p {
@@ -585,7 +588,7 @@ ul {
     letter-spacing: 1.2px;
     line-height: 15px;
   }
-  .sou img{
+  .sou img {
     z-index: 2;
   }
 
@@ -607,7 +610,7 @@ ul {
     animation: spin 2s linear infinite;
   }
 
-  #carimg{
+  #carimg {
     height: 130px;
     width: 390px;
   }

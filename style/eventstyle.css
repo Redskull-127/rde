@@ -112,6 +112,13 @@ body:hover{
     display: none;
 }
 
+#help{
+    position: absolute;
+    top: 7%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+}
+
 @keyframes ziper {
     0%{
         box-shadow: 0 0 40px red,
