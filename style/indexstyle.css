@@ -487,6 +487,13 @@ ul {
   height: 200px;
   display: none;
 }
+/* 
+.ppt{
+  margin: 50px;
+  width: 900px;
+  height: 400px;
+  background-color: transparent;
+} */
 
 #loader {
   display: flex;
@@ -591,6 +598,11 @@ ul {
   .sou img {
     z-index: 2;
   }
+
+  /* .ppt{
+    height: 200px;
+    width: 350px;
+  } */
 
   #loader {
     display: flex;

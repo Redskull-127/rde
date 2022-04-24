@@ -4,6 +4,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase
 import { getPerformance } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js";
 import { collection, getDocs, getFirestore } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js"; 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js";
 import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js";
 import {
   getRemoteConfig,
@@ -33,6 +34,7 @@ const perf = getPerformance(app);
 const remoteConfig = getRemoteConfig(app);
 const auth = getAuth();
 const db = getFirestore(app);
+const storage = getStorage(app);
 const appCheck = initializeAppCheck(app, {
   provider: new ReCaptchaV3Provider('6LdEZ5YfAAAAAFbBJ9zqAuRWvyuvkAxH0HspUtUq'),
 
@@ -101,3 +103,29 @@ if(counter == 0){
   usercount.innerHTML = "Please Wait!!!";  
 }
 else{usercount.innerHTML = counter;}
+
+const pptbtn = document.getElementById('pptbtn');
+const storageRef = ref(storage , 'RDEPPT.pptx');
+console.log(storageRef)
+pptbtn.addEventListener('click', function(){
+  getDownloadURL(storageRef)
+  .then((url) => {
+    // `url` is the download URL for 'images/stars.jpg'
+
+    // This can be downloaded directly:
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'blob';
+    xhr.onload = (event) => {
+      const blob = xhr.response;
+    };
+    xhr.open('GET', url);
+    xhr.send();
+
+    // Or inserted into an <img> element
+    const img = document.getElementById('myimg');
+    img.setAttribute('src', url);
+  })
+  .catch((error) => {
+    // Handle any errors
+  });
+})
