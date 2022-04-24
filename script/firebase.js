@@ -91,11 +91,11 @@ emailbutton.addEventListener("click", function () {
       });
       console.log("Document written with ID: ", docRef.id);
       showinfotxt.innerHTML =
-        "<center><h1>Success!</h1><br/><h1>Registration Saved!</h1></center>"
+        "<center><h1>Success!</h1><br/><h1>Check Your Mail!</h1></center>"
     } catch (e) {
       console.error("Error adding Registration: ", e);
       showinfotxt.innerHTML =
-        "<center><h1>Success!</h1><br/><h1>Registration Failed</h1></center>"
+        "<center><h1>Error!</h1><br/><h1>Registration Failed</h1></center>"
     }
   }
 });
