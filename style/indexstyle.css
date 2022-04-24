@@ -487,13 +487,16 @@ ul {
   height: 200px;
   display: none;
 }
-/* 
+
 .ppt{
-  margin: 50px;
-  width: 900px;
-  height: 400px;
+  margin: 40px;
+  padding: 20px;
   background-color: transparent;
-} */
+}
+
+.ppt h2{
+  margin: 20px;
+}
 
 #loader {
   display: flex;

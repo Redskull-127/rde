@@ -106,26 +106,26 @@ else{usercount.innerHTML = counter;}
 
 const pptbtn = document.getElementById('pptbtn');
 const storageRef = ref(storage , 'RDEPPT.pptx');
-console.log(storageRef)
 pptbtn.addEventListener('click', function(){
   getDownloadURL(storageRef)
   .then((url) => {
-    // `url` is the download URL for 'images/stars.jpg'
-
-    // This can be downloaded directly:
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = 'blob';
-    xhr.onload = (event) => {
-      const blob = xhr.response;
-    };
-    xhr.open('GET', url);
-    xhr.send();
-
-    // Or inserted into an <img> element
-    const img = document.getElementById('myimg');
-    img.setAttribute('src', url);
+    download(url, 'RDEPPT.pptx');
   })
   .catch((error) => {
-    // Handle any errors
   });
 })
+const download = (path, filename) => {
+  // Create a new link
+  const anchor = document.createElement('a');
+  anchor.href = path;
+  anchor.download = filename;
+
+  // Append to the DOM
+  document.body.appendChild(anchor);
+
+  // Trigger `click` event
+  anchor.click();
+
+  // Remove element from DOM
+  document.body.removeChild(anchor);
+}; 
