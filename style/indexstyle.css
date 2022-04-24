@@ -476,6 +476,18 @@ ul {
   border-radius: 15px;
 }
 
+.admin{
+  z-index: 11;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #e8a13d;
+  width: 350px;
+  height: 200px;
+  display: none;
+}
+
 #loader {
   display: flex;
   top: 40%;

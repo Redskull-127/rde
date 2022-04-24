@@ -2,6 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js";
 import { getPerformance } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js";
+import { collection, getDocs, getFirestore } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js"; 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js";
 import {
@@ -31,6 +32,7 @@ const analytics = getAnalytics(app);
 const perf = getPerformance(app);
 const remoteConfig = getRemoteConfig(app);
 const auth = getAuth();
+const db = getFirestore(app);
 const appCheck = initializeAppCheck(app, {
   provider: new ReCaptchaV3Provider('6LdEZ5YfAAAAAFbBJ9zqAuRWvyuvkAxH0HspUtUq'),
 
@@ -66,6 +68,7 @@ fetchAndActivate(remoteConfig)
 
 
 const idp = document.getElementById('idp');
+const admin = document.getElementById('admin');
 const rdemail = document.getElementById('emailrde');
 const passrde = document.getElementById('passrde');
 const loginbtn = document.getElementById('loginrde');
@@ -75,7 +78,8 @@ loginbtn.addEventListener('click', function(){
     // Signed in 
     const user = userCredential.user;
     console.log(user);
-    window.open('private.html')
+    idp.style.display = "none";
+    admin.style.display = "block";
     // ...
   })
   .catch((error) => {
@@ -85,8 +89,15 @@ loginbtn.addEventListener('click', function(){
   });
 })
 
-function load() {
-  if(user){
-    console.log("Working");
-  }
+// const docRef = doc(db, "user", "email");
+const querySnapshot = await getDocs(collection(db, "users"));
+let counter = 0;
+querySnapshot.forEach((doc) => {
+  counter++;
+});
+const usercount = document.getElementById('usercount');
+
+if(counter == 0){
+  usercount.innerHTML = "Please Wait!!!";  
 }
+else{usercount.innerHTML = counter;}

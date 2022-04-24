@@ -55,7 +55,7 @@
           <label for="emailrde" class="form-label">Email address</label>
           <input type="email" class="form-control" id="emailrde" placeholder="name@example.com">
           <label for="passrde" class="form-label">Password</label>
-          <input type="password" class="form-control" id="passrde" placeholder="Enter Your Password!">
+          <input type="password" autocomplete="on" class="form-control" id="passrde" placeholder="Enter Your Password!">
         </form>
         </div>
         <button type="button" class="btn btn-dark" id="loginrde">Login</button>
@@ -63,7 +63,11 @@
       </div>
       <button type="button" class="btn btn-dark" id="loginbtn">Login</button>
 
-
+      <div class="admin" id="admin">
+        <h1>Current Users</h1>
+        <h1 id="usercount"></h1>
+        <button type="button" class="btn btn-dark" id="logoutbtn">Logout</button>
+      </div>
 
       <div class="headbody">
         <div class="headimg">
@@ -299,6 +303,11 @@
     $(function () {
       $("#exitrde").click(function () {
         $('.idp').hide();
+      });
+    });
+    $(function () {
+      $("#logoutbtn").click(function () {
+        $('.admin').hide();
       });
     });
     var load = document.getElementById("loader");
