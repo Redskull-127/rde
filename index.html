@@ -61,7 +61,7 @@
         <button type="button" class="btn btn-dark" id="loginrde">Login</button>
         <button type="button" class="btn btn-dark" id="exitrde">Exit</button>
       </div>
-      <button type="button" class="btn btn-dark" id="loginbtn">Login</button>
+      <!-- <button type="button" class="btn btn-dark" id="loginbtn">Login</button> -->
 
       <div class="admin" id="admin">
         <h1>Current Users</h1>
@@ -90,7 +90,7 @@
           </li>
           <li class="element" id="aboutb">About</li>
           <li class="element" id="contactb">Contact</li>
-          <li class="element" id="joinb" onclick="joinalert();">Apply!</li>
+          <li class="element" id="joinb">Login</li>
         </ul>
       </div>
 
@@ -105,10 +105,10 @@
           </li>
           <li class="element" id="aboutm">About</li>
           <li class="element" id="contactm">Contact</li>
-          <li class="element" id="joinb" onclick="joinalert();">Apply!</li>
+          <li class="element" id="joinb">Login</li>
           
         </ul>
-        <button type="button" class="btn btn-dark" id="loginbtn">Login</button>
+        <!-- <button type="button" class="btn btn-dark" id="loginbtn">Login</button> -->
       </div>
 
       <div class="sou">
@@ -180,7 +180,7 @@
         </button>
       </div>
       <!-- About Us -->
-      <section class="reveal">
+      <section class="abouts reveal" id="abouts">
         <h1 class="aboutu " id="aboutu">About Us</h1>
         <div class="line" style="width: 130px"></div>
         <div class="about">
@@ -278,7 +278,7 @@
     $("#aboutb").click(function () {
       $("html, body").animate(
         {
-          scrollTop: $("#aboutu").offset().top,
+          scrollTop: $(".abouts").offset().top,
         },
         1200
       );
@@ -286,7 +286,7 @@
     $("#aboutm").click(function () {
       $("html, body").animate(
         {
-          scrollTop: $("#aboutu").offset().top,
+          scrollTop: $("#abouts").offset().top,
         },
         1200
       );
@@ -324,7 +324,7 @@
       );
     });
     $(function () {
-      $("#loginbtn").click(function () {
+      $("#joinb").click(function () {
         $('.idp').show();
       });
     });
