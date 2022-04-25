@@ -55,7 +55,7 @@
 .headimg img {
   -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
   filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
-  height: 100px;
+  height: 400px;
   animation: imgmove 4s linear infinite;
   animation-fill-mode: forwards;
   cursor: pointer;
@@ -384,7 +384,7 @@ ul {
 }
 
 .bodys .agenda img {
-  margin: 20px;
+  height: 250px;
 }
 
 .bodys .agenda .agcon {
@@ -408,6 +408,38 @@ ul {
   font-size: 15px;
   letter-spacing: 2px;
   color: #f5f5f5;
+}
+
+
+
+.moreinfo .intro {
+    margin: 50px;
+    width: 50%;
+}
+
+.moreinfo p{
+  font-size: 25px;
+}
+
+.moreinfo .who{
+  margin: 50px;
+  width: 80%;
+}
+
+.moreinfo .what{
+  margin: 50px;
+  width: 80%;
+}
+
+.moreinfo .outro{
+  margin: 50px;
+  width: 80%;
+}
+
+#infoheading {
+  font-weight: 800;
+  font-size: 30px;
+  margin: 10px;
 }
 
 .meetlead {
@@ -446,6 +478,18 @@ ul {
 
 .meet h1 {
   margin-top: 50px;
+}
+
+.meet {
+  display: block;
+  justify-content: space-between;
+}
+
+.meet img{
+  margin: 50px;
+  transition: 1s;
+  cursor: pointer;
+  height: 350px;
 }
 
 .meetmembers img {
@@ -532,6 +576,10 @@ ul {
     height: 500px;
   }
 
+  .headimg img{
+    height: 350px;
+  }
+
   .headsub {
     position: absolute;
     top: 50%;
@@ -561,7 +609,12 @@ ul {
     height: 220px;
     margin: 10px;
   }
-
+  .meet img{
+    margin: 15px;
+    transition: 1s;
+    cursor: pointer;
+    height: 200px;
+  }
   .headtext {
     font-size: 22px;
     font-weight: 50px;
@@ -628,5 +681,34 @@ ul {
   #carimg {
     height: 130px;
     width: 390px;
+  }
+
+  .moreinfo{
+    margin: 10px;
+    width: fit-content;
+  }
+
+  .moreinfo p{
+    font-size: 20px;
+  }
+
+  #infoheading{
+    font-size: 25px;
+  }
+
+  .moreinfo .intro {
+    width: fit-content;
+}
+
+  .moreinfo .who{
+    width: fit-content;
+  }
+  
+  .moreinfo .what{
+    width: fit-content;
+  }
+  
+  .moreinfo .outro{
+    width: fit-content;
   }
 }
