@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import "https://smtpjs.com/v3/smtp.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js";
 import { getPerformance } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js";
@@ -103,6 +104,8 @@ if(counter == 0){
   usercount.innerHTML = "Please Wait!!!";  
 }
 else{usercount.innerHTML = counter;}
+
+
 
 const pptbtn = document.getElementById('pptbtn');
 const storageRef = ref(storage , 'RDEPPT.pptx');

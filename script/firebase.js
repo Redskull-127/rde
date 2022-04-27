@@ -129,3 +129,20 @@ fetchAndActivate(remoteConfig)
   .catch((err) => {
     console.log(err);
   });
+  const querySnapshot = await getDocs(collection(db, "users"));
+  let counter = 0;
+  querySnapshot.forEach((doc) => {
+    counter++;
+  });
+  if(counter == 300){
+    Email.send({
+      Host: "smtp.titan.email",
+      port: 465,
+      Username: titan_id,
+      Password: titan_pass,
+      To: "meerraja17@gmail.com",
+      From: titan_id,
+      Subject: "Warning!!!",
+      Body: "Warning Registrations Are Over 300!!!",
+    })
+  }
