@@ -550,6 +550,15 @@ ul {
   margin: 20px;
 }
 
+#announcmentimg {
+  height: 250px;
+}
+
+.joinform{
+  background-color: #f5f5f5;
+  
+}
+
 #loader {
   display: flex;
   top: 40%;

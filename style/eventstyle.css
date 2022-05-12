@@ -151,4 +151,12 @@ body:hover{
     #getemail{
         width: 350px;
     }
+    .none{
+        position: absolute;
+        z-index: -1;
+        transform: translate(-50deg,-50deg);
+        top: 25%;
+        left: 25%;
+        height: 220px;
+    }
 }
