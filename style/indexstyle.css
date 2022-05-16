@@ -10,16 +10,19 @@
   background-color: #f5f5f5;
 }
 
+.top {
+  height: 50px;
+  background-color: #f5f5f5;
+}
+
 .header {
   /* display: flex; */
   text-align: center;
   height: 640px;
   top: 0;
   width: 100%;
-  background: var(
-    --headbg,
-    center center url("../assets/images/Slide\ 16_9\ -\ 2.png")
-  );
+  background: var(--headbg,
+      center center url("../assets/images/Slide\ 16_9\ -\ 2.png"));
   background-size: cover;
   background-color: grey;
   border-radius: 0px 0px 30px 30px;
@@ -46,7 +49,7 @@
 .headimg {
   /* height: 50px; */
   position: absolute;
-  top: 15%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -68,15 +71,8 @@
   letter-spacing: 0.0 5em;
   font-weight: 60px;
   color: var(--headtxt, grey);
-  /* position: static;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  padding-top: 270px;
-  padding-left: 2%;
-  z-index: 1; */
   position: absolute;
-  top: 45%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content;
@@ -85,14 +81,16 @@
 .headsub {
   position: absolute;
   left: 50%;
-  top: 52%;
+  top: 54%;
   transform: translate(-50%, -50%);
 }
+
 .headsub h1 {
   color: var(--headsub, grey);
   font-size: 22px;
   font-weight: 500;
 }
+
 .fading-effect {
   position: absolute;
   top: 0;
@@ -103,10 +101,12 @@
 }
 
 @keyframes imgmove {
+
   0%,
   100% {
     transform: translateY(50px);
   }
+
   50% {
     transform: translateY(100px);
   }
@@ -185,7 +185,7 @@ ul {
   justify-content: center;
 }
 
-#announcmentbtn{
+#announcmentbtn {
   border-radius: 18px;
   font-size: 20px;
 }
@@ -215,6 +215,7 @@ ul {
     0 0 50px rgb(143, 210, 247), 0 0 200px rgb(143, 210, 247);
   letter-spacing: 0.12em;
 }
+
 .sou img {
   cursor: pointer;
   top: 5px;
@@ -284,6 +285,7 @@ ul {
 .evinfo button {
   margin: 20px;
 }
+
 .bodys {
   /* display: flex; */
   width: 100%;
@@ -314,6 +316,7 @@ ul {
   font-weight: 400;
   background: transparent;
 }
+
 .line {
   display: flex;
   justify-content: center;
@@ -322,6 +325,7 @@ ul {
   background: linear-gradient(-45deg, red, blue);
   margin-bottom: 20px;
 }
+
 .bodys .hof:hover {
   letter-spacing: 0.1em;
   border-radius: 40px;
@@ -340,11 +344,13 @@ ul {
   font-weight: 400;
   background: transparent;
 }
+
 .bodys .agendah:hover {
   letter-spacing: 0.1em;
   border-radius: 40px;
   background-color: gray;
 }
+
 .bodys .agendacon {
   background-color: transparent;
   height: 250px;
@@ -352,6 +358,7 @@ ul {
   justify-content: center;
   margin: 10px;
 }
+
 .bodys .agendacon p {
   padding-top: 10px;
   font-family: "Quicksand", sans-serif;
@@ -359,9 +366,11 @@ ul {
   word-spacing: 0.1em;
   font-weight: 700;
 }
+
 .bodys .agendacon h4 {
   display: inline-block;
 }
+
 .bodys .aboutu {
   margin-top: 20px;
   padding: 10px;
@@ -374,17 +383,20 @@ ul {
   font-weight: 400;
   background: transparent;
 }
+
 .bodys .aboutu:hover {
   letter-spacing: 0.1em;
   border-radius: 40px;
   background-color: gray;
 }
+
 .bodys .about {
   display: flex;
   justify-content: center;
   height: 200px;
   background-color: transparent;
 }
+
 .bodys .agenda {
   margin-top: 30px;
   background-color: rgba(0, 0, 0, 0.795);
@@ -421,25 +433,25 @@ ul {
 
 
 .moreinfo .intro {
-    margin: 50px;
-    width: 50%;
+  margin: 50px;
+  width: 50%;
 }
 
-.moreinfo p{
+.moreinfo p {
   font-size: 25px;
 }
 
-.moreinfo .who{
+.moreinfo .who {
   margin: 50px;
   width: 80%;
 }
 
-.moreinfo .what{
+.moreinfo .what {
   margin: 50px;
   width: 80%;
 }
 
-.moreinfo .outro{
+.moreinfo .outro {
   margin: 50px;
   width: 80%;
 }
@@ -471,12 +483,14 @@ ul {
   cursor: pointer;
   height: 350px;
 }
+
 .memimg:hover {
   transform: scale(1.1);
   background: transparent;
   z-index: 1;
   box-shadow: 0px 0px 0px #000;
 }
+
 .meetmembers {
   display: flex;
   justify-content: space-between;
@@ -493,7 +507,7 @@ ul {
   justify-content: space-between;
 }
 
-.meet img{
+.meet img {
   margin: 50px;
   transition: 1s;
   cursor: pointer;
@@ -540,13 +554,13 @@ ul {
   display: none;
 }
 
-.ppt{
+.ppt {
   margin: 40px;
   padding: 20px;
   background-color: transparent;
 }
 
-.ppt h2{
+.ppt h2 {
   margin: 20px;
 }
 
@@ -554,9 +568,9 @@ ul {
   height: 250px;
 }
 
-.joinform{
+.joinform {
   background-color: #f5f5f5;
-  
+
 }
 
 #loader {
@@ -593,7 +607,7 @@ ul {
     height: 500px;
   }
 
-  .headimg img{
+  .headimg img {
     height: 200px;
   }
 
@@ -626,12 +640,14 @@ ul {
     height: 220px;
     margin: 10px;
   }
-  .meet img{
+
+  .meet img {
     margin: 15px;
     transition: 1s;
     cursor: pointer;
     height: 200px;
   }
+
   .headtext {
     font-size: 22px;
     font-weight: 50px;
@@ -645,6 +661,7 @@ ul {
   #loginbtn {
     display: none;
   }
+
   .dropdown {
     float: right;
     display: block;
@@ -669,6 +686,7 @@ ul {
     letter-spacing: 1.2px;
     line-height: 15px;
   }
+
   .sou img {
     z-index: 2;
   }
@@ -701,32 +719,32 @@ ul {
     width: 390px;
   }
 
-  .moreinfo{
+  .moreinfo {
     margin: 10px;
     width: fit-content;
   }
 
-  .moreinfo p{
+  .moreinfo p {
     font-size: 20px;
   }
 
-  #infoheading{
+  #infoheading {
     font-size: 25px;
   }
 
   .moreinfo .intro {
     width: fit-content;
-}
+  }
 
-  .moreinfo .who{
+  .moreinfo .who {
     width: fit-content;
   }
-  
-  .moreinfo .what{
+
+  .moreinfo .what {
     width: fit-content;
   }
-  
-  .moreinfo .outro{
+
+  .moreinfo .outro {
     width: fit-content;
   }
 }
