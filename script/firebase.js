@@ -78,14 +78,14 @@ emailbutton.addEventListener("click", function () {
   })
     .then(
       (showinfotxt.innerHTML =
-        "<center><h1>Success!</h1><br/><h1>Check Your Mail!</h1></center>")
+        "<center><h1>Success!</h1><br/><h1>Check Your Mail!</h1></center>", console.log("Working"))
     )
     .catch((errorinfo) => {
       showinfotxt.innerHTML = errorinfo;
       console.log(errorinfo);
     });
     try {
-      const docRef =  addDoc(collection(db, "users"), {
+      const docRef =  addDoc(collection(db, "gitgithub"), {
         email : emailvalue.value,
         name : username.value
       });
@@ -146,3 +146,4 @@ fetchAndActivate(remoteConfig)
       Body: "Warning Registrations Are Over 300!!!",
     })
   }
+
