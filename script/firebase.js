@@ -62,7 +62,7 @@ emailbutton.addEventListener("click", function () {
   showinfotxt.innerHTML = "<center><h1>Please Wait!</h1></center>";
   if(emailvalue.value == '' || username.value == ''){
     showinfotxt.innerHTML = "<center><h1>Please Enter Required Details!</h1></center>";
-    console.log("working")
+    console.log("Entires")
   }
   else
   {
@@ -73,7 +73,7 @@ emailbutton.addEventListener("click", function () {
     Password: titan_pass,
     To: emailvalue.value,
     From: titan_id,
-    Subject: username.value + ',' + titan_sub,
+    Subject: username.value + ', ' + titan_sub,
     Body: titan_body,
   })
     .then(
@@ -91,7 +91,8 @@ emailbutton.addEventListener("click", function () {
       });
       console.log("Document written with ID: ", docRef.id);
       showinfotxt.innerHTML =
-        "<center><h1>Success!</h1><br/><h1>Check Your Mail!</h1></center>"
+        "<center><h1>Success!</h1></center>"
+        window.open('https://forms.gle/D1WnKaDzpfUyS4weA')
     } catch (e) {
       console.error("Error adding Registration: ", e);
       showinfotxt.innerHTML =
@@ -129,21 +130,4 @@ fetchAndActivate(remoteConfig)
   .catch((err) => {
     console.log(err);
   });
-  const querySnapshot = await getDocs(collection(db, "gitgithub"));
-  let counter = 0;
-  querySnapshot.forEach((doc) => {
-    counter++;
-  });
-  if(counter == 300){
-    Email.send({
-      Host: "smtp.titan.email",
-      port: 465,
-      Username: titan_id,
-      Password: titan_pass,
-      To: "meerraja17@gmail.com",
-      From: titan_id,
-      Subject: "Warning!!!",
-      Body: "Warning Registrations Are Over 300!!!",
-    })
-  }
-
+  
