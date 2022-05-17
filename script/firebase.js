@@ -129,7 +129,7 @@ fetchAndActivate(remoteConfig)
   .catch((err) => {
     console.log(err);
   });
-  const querySnapshot = await getDocs(collection(db, "users"));
+  const querySnapshot = await getDocs(collection(db, "gitgithub"));
   let counter = 0;
   querySnapshot.forEach((doc) => {
     counter++;
