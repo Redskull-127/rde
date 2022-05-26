@@ -24,6 +24,7 @@
       <script src="script/eventscript.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="script/material.js"></script>
+      <script src="script/animation.js"></script>
       <!-- Style -->
       <link rel="stylesheet"
             href="style/material.css" />
@@ -104,15 +105,36 @@
             </span>
       </section>
       <center>
-            <section class="photos testing">
+            <!-- <section class="photos reveal">
                   <h1 id="test">All photos here!</h1>
+            </section> -->
+            <section class="ppt reveal">
+                  <h1 id="test">Get All PPT/PDF/IMG</h1>
+                  <div class="dib">
+                        <div class="entries reveal">
+                              <h1>SESSION I</h1>
+                              <button type="button" class="btn btn-dark">Download PPT</button>
+                        </div>
+                        <div class="entries reveal">
+                              <h1>SESSION 2</h1>
+                              <button type="button" class="btn btn-dark">Download PPT</button>
+                        </div>
+                  </div>
             </section>
-            <section class="ppt testing">
-                  <h1 id="test">All ppt here!</h1>
-            </section>
-            <section class="content testing">
+            <section class="content reveal">
                   <h1 id="test">All content here!</h1>
+                  <div class="dib">
+                        <div class="entries reveal">
+                              <h1>SESSION I</h1>
+                              <button type="button" class="btn btn-dark">Download REPORT</button>
+                        </div>
+                        <div class="entries reveal">
+                              <h1>SESSION 2</h1>
+                              <button type="button" class="btn btn-dark">Download REPORT</button>
+                        </div>
+                  </div>
             </section>
+            <div class="extra"></div>
       </center>
       <script>
             $("#photos").click(function () {
