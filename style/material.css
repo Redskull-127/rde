@@ -1,7 +1,7 @@
 html,
 #body {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     height: 100%;
     width: 100%;
     font-family: "Ubuntu", sans-serif;
@@ -118,4 +118,34 @@ nav img {
 
 .extra{
     height: 350px;
+}
+
+@media screen and (max-width: 845px) {
+    .em1 {
+        top: 15%;
+        left: 2%;
+        height: 100px;
+    }
+    
+    .em2 {
+        right: 5%;
+        top: 20%;
+        height: 100px;
+    }
+    
+    .em3 {
+        top: 70%;
+        left: 13%;
+        height: 100px;
+    }
+    
+    .em4 {
+        right: 2%;
+        top: 69%;
+        height: 100px;
+    }
+
+    .ppt {
+        margin-top: 700px;
+    }
 }
