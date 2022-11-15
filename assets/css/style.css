@@ -1376,3 +1376,22 @@ section {
     padding: 3px 0;
   }
 }
+
+
+@media (max-width: 400px) {
+  .image-size img{
+    width: 50px;
+  }
+}
+
+  @media (max-width: 575px) {
+  .image-size img{
+    width: 300px;
+  }
+}
+
+@media (max-width: 985px) {
+  .image-size img{
+    width: 350px;
+  }
+}
